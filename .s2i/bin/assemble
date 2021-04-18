@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
-
-source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
-
-echo "---> Enabling s2i support in httpd24 image"
-
-config_s2i
+source ${STI_SCRIPTS_PATH}/assemble
 echo " Installing APP source"
 cp -Rf /tmp/src/* ./
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
